@@ -1,0 +1,46 @@
+{
+  "name": "remodeljs",
+  "version": "0.1.0",
+  "description": "compiles a mapping expressed in a JSON definition to javascript.",
+  "main": "index.js",
+  "scripts": {
+    "check:style": "eslint .",
+    "test": "_mocha -- $npm_package_config_mocha && npm run check:style",
+    "test:coverage:run": "istanbul cover _mocha -- $npm_package_config_mocha",
+    "test:coverage:check": "istanbul check-coverage --functions 80",
+    "test:coverage": "npm run test:coverage:run && npm run test:coverage:check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hveiras/remodeljs.git"
+  },
+  "keywords": [
+    "mapper",
+    "declarative",
+    "code-generator"
+  ],
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2",
+    "istanbul": "^0.4.0",
+    "semistandard": "^9.1.0",
+    "eslint": "^3.8.0",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-config-semistandard": "^7.0.0",
+    "eslint-plugin-promise": "^3.0.0",
+    "eslint-plugin-standard": "^2.0.1"
+  },
+  "author": "hveiras <hernan.veiras@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hveiras/remodeljs/issues"
+  },
+  "homepage": "https://github.com/hveiras/remodeljs#readme",
+  "dependencies": {
+    "babel-generator": "^6.24.1",
+    "babel-traverse": "^6.24.1",
+    "babel-types": "^6.24.1",
+    "babylon": "^6.17.0",
+    "ramda": "^0.23.0"
+  }
+}
